@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="jeremy">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#1976D2">
+
+    <title>Jeremy Drager</title>
+    <base href="/">
+    <!-- JS  -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+<body id="body">
+    <header>
+        <nav>
+            <div class="nav-wrapper nav-pad">
+                <a href="/#/" class="brand-logo">Jeremy Drager</a>
+                <a href="#/" data-activates="side-nav" class="button-collapse side-nav-button"><i class="material-icons">menu</i></a>
+                <ul class="main-nav right hide-on-med-and-down">
+                    <li><a class="waves-effect" onclick="smoothScroll('#technology', true, 750)"><i class="fa fa-code"></i>Technology</a></li>
+                    <li><a class="waves-effect" onclick="smoothScroll('#brewing', true, 1000)"><i class="fa fa-beer"></i>Brewing</a></li>
+                    <li><a class="waves-effect" onclick="smoothScroll('#hockey', true, 1250)"><i class="fa fa-trophy"></i>Hockey</a></li>
+                    <li><a class="waves-effect" href="/#/wedding"><i class="fa fa-diamond"></i>Wedding</a></li>  <!--onclick="smoothScroll('#wedding', true, 1500)"-->
+                    <li><a class="waves-effect" href="https://cash.me/$jdrager"><i class="fa fa-credit-card"></i><span>Money</span></a></li>
+                </ul>
+                <ul class="main-nav side-nav" id="side-nav">
+                    <li class="logo avatar center-align">
+                        <a class="logo" id="logo-container" href="/#/">
+                            <img src="img/jeremy.jpg" />
+                        </a>
+                    </li>
+                    <li><a onclick="smoothScroll('#technology', true, 750)"><i class="fa fa-code"></i><span>Technology</span></a></li>
+                    <li><a onclick="smoothScroll('#brewing', true, 1000)"><i class="fa fa-beer"></i><span>Brewing</span></a></li>
+                    <li><a onclick="smoothScroll('#hockey', true, 1250)"><i class="fa fa-trophy"></i><span>Hockey</span></a></li>
+                    <li><a href="/#/wedding"><i class="fa fa-diamond"></i><span>Wedding</span></a></li>   <!--onclick="smoothScroll('#wedding', true, 1500)"-->
+                    <li><a href="https://cash.me/$jdrager"><i class="fa fa-credit-card"></i><span>Money</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <ng-view></ng-view>
+        <div class="scroll-to-top fixed-action-btn fade out" style="bottom: 30px; right: 30px;">
+            <a class="btn btn-floating btn-large blue darken-2 waves-effect waves-light" onclick="smoothScroll('#body', false, 1000)">
+                <i class="fa fa-arrow-up"></i>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <script src="js/lib.js"></script>
+        <script src="js/main.js"></script>
+    </footer>
+</body>
+</html>

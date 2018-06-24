@@ -1,0 +1,114 @@
+﻿// base
+@import "base/fonts.scss";
+
+// modules
+@import "modules/social-buttons.scss";
+@import "modules/materialize-extensions.scss";
+@import "modules/navs.scss";
+@import "modules/avatar.scss";
+
+// themes
+@import "themes/main.scss";
+@import "themes/wedding.scss";
+
+// vendors
+@import "vendor/materialize/materialize.scss";
+@import "vendor/font-awesome/font-awesome.scss";
+
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:not(.parallax-container, .parallax, img) {
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+.mint {
+    background-color: $mint !important;
+}
+
+.mint-text {
+    color: $mint !important;
+}
+
+.navy {
+    background-color: $navy !important;
+}
+
+.navy-text {
+    color: $navy !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button, input, nav, ul, li, b, img, u, i:not(.fa):not(.material-icons) {
+    font-family: 'Roboto', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.content {
+    padding: 30px 50px;
+}
+
+.content-card .row img.col {
+    padding: 2px;
+}
+
+.title {
+    text-align: center;
+    margin: 10px;
+}
+
+
+.fade {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade.out {
+    opacity: 0;
+}
+
+img {
+    line-height: 2;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    min-height: 50px;
+}
+
+img:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    height: calc(100% + 10px);
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    border: 2px dotted rgb(200, 200, 200);
+    border-radius: 5px;
+}
+
+img:after {
+    content: "\f127" " Broken Image of " attr(alt);
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-family: FontAwesome;
+    color: rgb(100, 100, 100);
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}

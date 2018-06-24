@@ -1,0 +1,27 @@
+{
+  "userSecretsId": "aspnet5-jeremydrager-20150907104315",
+  "webroot": "wwwroot",
+  "version": "1.0.0-*",
+  "dependencies": {
+    "jeremydrager": "1.0.0"
+  },
+  "commands": {
+    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+  },
+  "frameworks": {
+    "dnx451": {}
+  },
+  "publishExclude": [
+    "node_modules",
+    "bower_components",
+    "**.user",
+    "**.vspscc"
+  ],
+  "exclude": [
+    "wwwroot",
+    "node_modules",
+    "bower_components"
+  ],
+  "entryPoint": "jeremydrager",
+  "loadable": false
+}

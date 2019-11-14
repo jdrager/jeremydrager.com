@@ -1,0 +1,15 @@
+nav .nav-pad {
+  padding: 0 0.75rem; }
+
+nav .nav-wrapper i.fa {
+  height: 15px;
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 5px; }
+
+/* .side-nav .logo {
+  min-height: 155px;
+  border-bottom: 1px solid #dddddd; }
+
+.side-nav a {
+  cursor: pointer; } */

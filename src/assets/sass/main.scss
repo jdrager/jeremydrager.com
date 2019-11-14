@@ -1,0 +1,52 @@
+﻿// base
+@import "base/fonts.scss";
+
+// helpers
+@import "helpers/polyfills.scss";
+
+// modules
+@import "modules/social-buttons.scss";
+@import "modules/navs.scss";
+@import "modules/avatar.scss";
+
+
+// // vendors
+// @import "vendor/materialize/materialize.scss";
+
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:not(.parallax-container, .parallax, img) {
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button, input, nav, ul, li, b, img, u, i:not(.fa):not(.material-icons) {
+    font-family: 'Roboto', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.title {
+    text-align: center;
+    margin: 10px;
+}
+
+
+.fade {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade.out {
+    opacity: 0;
+}

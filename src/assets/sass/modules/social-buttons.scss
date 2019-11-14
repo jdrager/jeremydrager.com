@@ -1,0 +1,36 @@
+﻿.social-btns {
+    display: flex;
+    justify-content: space-around;
+    max-width: 200px;
+    margin: auto;
+
+    .btn {
+        &.btn-floating .fa {
+            font-size: 1em;
+        }
+
+        &.btn-twitter {
+            color: #fff;
+            background-color: #55acee;
+            border-color: #88c9f9;
+        }
+
+        &.btn-linkedin {
+            color: #fff;
+            background-color: #2867B2;
+            border-color: #133783;
+        }
+
+        &.btn-facebook {
+            color: #fff;
+            background-color: #3a5795;
+            border-color: #133783;
+        }
+
+        &.btn-git {
+            color: #333333;
+            background-color: #F5F5F5;
+            border-color: #333333;
+        }
+    }
+}

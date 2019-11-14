@@ -1,0 +1,12 @@
+﻿@import "../vendor/materialize/components/color";
+
+.nav-pad {
+    padding: 0 0.75rem;
+}
+
+
+.jeremy-nav {
+    @extend .blue !optional;
+    @extend .darken-2 !optional;
+    @extend .nav-pad !optional;
+}

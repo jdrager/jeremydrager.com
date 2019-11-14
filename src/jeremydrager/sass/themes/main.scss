@@ -1,9 +1,0 @@
-﻿@import '../helpers/mixins.scss';
-
-body.main {
-    nav {
-        .nav-wrapper {
-            @extend .blue.darken-2;
-        }
-    }
-}

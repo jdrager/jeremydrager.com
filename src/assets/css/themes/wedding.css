@@ -1,0 +1,40 @@
+body.wedding nav .nav-wrapper ul.main-nav {
+  display: none; }
+
+body.wedding .sub-nav {
+  background-color: #0FDFD8; }
+
+body.wedding .hero-text {
+  color: white;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-align: center;
+  font-size: 4vw;
+  position: relative;
+  font-family: 'Oswald',sans-serif;
+  letter-spacing: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 10;
+  opacity: .9;
+  padding-top: 20vh; }
+
+body.wedding .parallax-container {
+  height: 90vh;
+  width: 100%; }
+  body.wedding .parallax-container.first {
+    height: 70vh; }
+    body.wedding .parallax-container.first .parallax img {
+      background-size: cover;
+      background-position-y: 50%; }
+
+body.wedding .parallax img {
+  width: 100%;
+  min-width: 768px; }
+
+body.wedding .info {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 20px; }

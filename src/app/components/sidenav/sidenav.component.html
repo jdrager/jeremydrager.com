@@ -1,0 +1,30 @@
+<mz-sidenav [id]="'side-nav'" [collapseButtonId]="'open-side-nav'" [closeOnClick]="true">
+    <mz-sidenav-header>
+        <div class="user-view">
+            <img class="circle avatar" src="assets/img/smile.jpg">
+            <div class="name white-text">Jeremy Drager</div>
+            <div class="email white-text">info@jeremydrager.com</div>
+        </div>
+    </mz-sidenav-header>
+    <social-buttons></social-buttons>
+    <mz-sidenav-link>
+        <a href="#technology" class="waves-effect">
+            <fa-icon class="material-icons fa-pad" [icon]="code"></fa-icon>Technology
+        </a>
+    </mz-sidenav-link>
+    <mz-sidenav-link>
+        <a href="#brewing" class="waves-effect">
+            <fa-icon class="material-icons fa-pad" [icon]="beer"></fa-icon>Brewing
+        </a>
+    </mz-sidenav-link>
+    <mz-sidenav-link>
+        <a href="#hockey" class="waves-effect">
+            <fa-icon class="material-icons fa-pad" [icon]="hockey"></fa-icon>Hockey
+        </a>
+    </mz-sidenav-link>
+    <mz-sidenav-link>
+        <a href="#life" class="waves-effect">
+            <fa-icon class="material-icons fa-pad" [icon]="life"></fa-icon>Life
+        </a>
+    </mz-sidenav-link>
+</mz-sidenav>

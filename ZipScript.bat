@@ -1,1 +1,0 @@
-for /d %%a in (*) do (zip -r -p "%%~na.zip" ".\%%a\*")

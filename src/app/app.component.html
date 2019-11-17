@@ -1,162 +1,65 @@
-<mz-navbar [navbarClass]="'jeremy-nav'">
-  <button mz-button [flat]="true" id="open-side-nav">
-    <fa-icon class="material-icons fa-pad" [icon]="bars"></fa-icon>
-  </button>
-  <a href="#" class="brand-logo center">Jeremy Drager</a>
-  <mz-navbar-item-container [align]="'right'">
-    <mz-navbar-item [itemClass]="'hide-on-med-and-down'">
-      <a class="waves-effect" onclick="smoothScroll('#technology', true, 750)">
-        <fa-icon class="material-icons fa-pad" [icon]="code"></fa-icon>
-        <span>Technology</span>
-      </a>
-    </mz-navbar-item> 
-    <mz-navbar-item [itemClass]="'hide-on-med-and-down'">
-      <a class="waves-effect" onclick="smoothScroll('#brewing', true, 1000)">
-        <fa-icon class="material-icons fa-pad" [icon]="beer"></fa-icon>
-        <span>Brewing</span>
-      </a>
-    </mz-navbar-item>
-    <mz-navbar-item [itemClass]="'hide-on-med-and-down'">
-      <a class="waves-effect" onclick="smoothScroll('#hockey', true, 1250)">
-        <fa-icon class="material-icons fa-pad" [icon]="hockey"></fa-icon>
-        <span>Hockey</span>
-      </a>
-    </mz-navbar-item>
-  </mz-navbar-item-container>
-</mz-navbar>
-
-<mz-sidenav [id]="'side-nav'" [collapseButtonId]="'open-side-nav'">
-  <mz-sidenav-header>
-    <div class="user-view">
-      <img class="circle avatar" src="../assets/img/jeremy.jpg">
-      <div class="name">Jeremy Drager</div>
-      <div class="email">info@jeremydrager.com</div>
-    </div>
-  </mz-sidenav-header>
-  <mz-sidenav-link [active]="true">
-    <a href="#technology" class="waves-effect">
-      <fa-icon class="material-icons fa-pad" [icon]="code"></fa-icon>Technology
-    </a>
-  </mz-sidenav-link>
-  <mz-sidenav-link [active]="true">
-    <a href="#brewing" class="waves-effect">
-      <fa-icon class="material-icons fa-pad" [icon]="beer"></fa-icon>Brewing
-    </a>
-  </mz-sidenav-link>
-  <mz-sidenav-link [active]="true">
-    <a href="#hockey" class="waves-effect">
-      <fa-icon class="material-icons fa-pad" [icon]="hockey"></fa-icon>Hockey
-    </a>
-  </mz-sidenav-link>
-
-</mz-sidenav>
+<navbar></navbar>
+<sidenav></sidenav>
 <main>
-  <mz-parallax>
-    <img src="../assets/img/detroit.jpg">
-  </mz-parallax>
-  <div class="section white">
-    <div class="row container center-align">
-      <div class="avatar avatar-overlap">
-        <img alt="" src="../assets/img/jeremy.jpg">
-      </div>
-      <div class="info">
-        <div class="title">
-          <a target="_blank" href="http://jeremydrager.com">Jeremy Drager</a>
-        </div>
-        <div class="desc">Amatuer Skater</div>
-        <div class="desc">Amatuer Brewer</div>
-        <div class="desc">Pro-am Developer</div>
-      </div>
-      <div class="social-btns">
-        <a class="btn btn-floating btn-twitter waves-effect" href="https://twitter.com/jdrager">
-          <fa-icon [icon]="twitter"></fa-icon>
-        </a>
-        <a class="btn btn-floating btn-git waves-effect" rel="publisher" href="https://github.com/jdrager">
-          <fa-icon [icon]="github"></fa-icon>
-        </a>
-        <a class="btn btn-floating btn-linkedin waves-effect" rel="publisher" href="https://www.linkedin.com/in/jdrager">
-          <fa-icon [icon]="linkedin"></fa-icon>
-        </a>
-        <a class="btn btn-floating btn-facebook waves-effect" rel="publisher" href="https://www.facebook.com/jdrager">
-          <fa-icon [icon]="facebook"></fa-icon>
-        </a>
-      </div>
-    </div>
-  </div>
-  <mz-parallax>
-    <img src="../assets/img/gulp.png">
-  </mz-parallax>
+  <parallax image="assets/img/detroit.jpg"></parallax>
+  <hero></hero>
+  <parallax image="assets/img/dev.png"></parallax>
   <div id="technology" class="section white content-card">
     <div class="row container valign-wrapper">
       <div class="col s12 m6 center-align valign">
         <h2 class="header">Technology</h2>
-        <p class="grey-text text-darken-3 lighten-3">I am a software engineer, focusing primarily on the .NET stack.
-          This
-          website was built in Visual Studio 2015 RC using Angular.js, Gulp, Sass, and NPM.</p>
-        <a href="https://github.com/jdrager" class="btn btn-flat waves-effect"
-          onclick="Materialize.toast('Coming soon!', 4000)">Check me out on Github</a>
+        <p class="grey-text text-darken-3 lighten-3">I am a Technology Team Leader, focused primarily in modern web
+          development and the .NET stack. This website was built using Angular 8 and Materialize in VS Code and deployed
+          to AWS using S3, Cloudfront, and CircleCI.</p>
+        <a href="https://github.com/jdrager" class="btn btn-flat waves-effect">Check me out on Github</a>
       </div>
       <img src="../assets/img/nottechnology.jpg" class="z-depth-1 col s6 hide-on-small-only" />
     </div>
   </div>
-  <mz-parallax>
-    <img src="../assets/img/slapshot.jpg">
-  </mz-parallax>
+  <parallax image="assets/img/slapshot.jpg"></parallax>
   <div id="brewing" class="section white content-card">
     <div class="row container valign-wrapper">
-      <img src="../assets/img/keg.jpg" class="z-depth-1 col s6 hide-on-small-only" />
+      <img src="assets/img/keg.jpg" class="z-depth-1 col s6 hide-on-small-only" />
       <div class="col s12 m6 center-align valign">
         <h2 class="header">Brewing</h2>
-        <p class="grey-text text-darken-3 lighten-3">I started homebrewing with my friend John in October 2014. We've
-          elevated to Kegs and All-Grain brewing. It's a constant battle: Stouts vs IPAs.</p>
-        <a class="btn btn btn-flat waves-effect" onclick="Materialize.toast('Coming soon!', 4000)">Visit our brewing
-          site</a>
+        <p class="grey-text text-darken-3 lighten-3">I started homebrewing with my friend John in October 2014. I'm now
+          his assitant to the regional brewmaster. One of these days, I'll convince him to take the next step and open
+          his own brewery.</p>
+        <a class="btn btn btn-flat waves-effect" onclick="Materialize.toast('Coming soon!', 4000)">Visit the JFlo
+          Brewing Co. website</a>
       </div>
     </div>
   </div>
-  <mz-parallax [height]="400">
-    <img src="../assets/img/kfalcs.jpg">
-  </mz-parallax>
+  <parallax image="assets/img/kfalcs.jpg"></parallax>
   <div id="hockey" class="section white content-card">
     <div class="row container valign-wrapper">
       <div class="col s12 m6 center-align valign">
         <h2 class="header">Hockey</h2>
-        <p class="grey-text text-darken-3 lighten-3">I captain a Rec League Hockey Team called the Kamikaze Falcons. The
-          team started in 2012 and we are in our 7th season.</p>
-        <a class="btn btn-flat waves-effect" onclick="Materialize.toast('Coming soon!', 4000)">Go To
-          KamikazeFalcons.com</a>
+        <p class="grey-text text-darken-3 lighten-3">I started playing hockey in 2012, starting the Kamikaze Falcons, a
+          Rec League Hockey team in Metro Detroit. Since then, we've started our self-ran draft league--Monday Night
+          Lights--that I co-manage, as well as run a team</p>
+        <a class="btn btn-flat waves-effect" href="http://kamikazefalcons.com">Check out the KFalcs Schedule</a>
+        <a class="btn btn-flat waves-effect" href="https://mnlhl.com/">Check out Monday Night Lights Hockey League</a>
       </div>
-      <img src="../assets/img/celly.jpg" class="z-depth-1 center-align col s6 hide-on-small-only" />
+      <img src="assets/img/shot.JPG" class="z-depth-1 center-align col s6 hide-on-small-only" />
     </div>
   </div>
-  <mz-parallax>
-    <img src="../assets/img/wings.jpg">
-  </mz-parallax>
-  <div id="wedding" class="section white content-card">
+  <parallax image="assets/img/keg-win.jpg"></parallax>
+  <div id="life" class="section white content-card">
     <div class="row container valign-wrapper">
-      <img src="../assets/img/me-and-melissa.jpg" class="z-depth-1 center-align col s6 hide-on-small-only" />
+      <img src="assets/img/melissa.jpg" class="z-depth-1 center-align col s6 hide-on-small-only" />
       <div class="col s12 m6 center-align valign">
-        <h2 class="header">Wedding</h2>
-        <p class="grey-text text-darken-3 lighten-3">I am marrying my fiancée Melissa next summer. We'll be getting
-          married at the Packard Proving Grounds on May 20<sup>th</sup>, 2015.</p>
-        <a class="btn btn btn-flat waves-effect" href="/#wedding">Check out our wedding site!</a>
+        <h2 class="header">Life</h2>
+        <p class="grey-text text-darken-3 lighten-3">I live in Berkley, MI with my amazing wife Melissa and our dog
+          Hank. We enjoy tacos, beer, and video games.</p>
+        <div class="conversation">
+          <blockquote>You need to advertise me more.</blockquote>
+          <blockquote style="border-left-color:cadetblue">What does that mean?</blockquote>
+          <blockquote>Just say more nice things!</blockquote>
+        </div>
+        <p class="grey-text text-darken-3 lighten-3">She's nice.</p>
       </div>
     </div>
   </div>
-  <div class="scroll-to-top fixed-action-btn fade out" style="bottom: 30px; right: 30px;">
-    <a class="btn btn-floating btn-large blue darken-2 waves-effect waves-light" onclick="smoothScroll('#body', 1000)">
-      <i class="fa fa-arrow-up"></i>
-    </a>
-  </div>
-  <div class="scroll-to-top fixed-action-btn fade out" style="bottom: 30px; right: 30px;">
-    <a class="btn btn-floating btn-large blue darken-2 waves-effect waves-light"
-      onclick="smoothScroll('#body', false, 1000)">
-      <fa-icon [icon]="arrow"></fa-icon>
-    </a>
-  </div>
+  <return-to-top-arrow></return-to-top-arrow>
 </main>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('.parallax').parallax();
-  });
-</script>

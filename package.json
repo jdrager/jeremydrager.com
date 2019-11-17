@@ -23,6 +23,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "c": "^0.1.0",
     "jquery": "^3.4.1",
     "materialize-css": "^0.100.2",
     "ngx-materialize": "^6.1.3",

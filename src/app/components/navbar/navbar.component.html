@@ -1,0 +1,32 @@
+<mz-navbar [navbarClass]="'jeremy-nav'">
+  <button mz-button [flat]="true" id="open-side-nav">
+    <fa-icon class="material-icons fa-pad" [icon]="bars"></fa-icon>
+  </button>
+  <a href="#" class="brand-logo center">Jeremy Drager</a>
+  <mz-navbar-item-container [align]="'right'">
+    <mz-navbar-item [itemClass]="'hide-on-med-and-down'">
+      <a class="waves-effect" href="#technology">
+        <fa-icon class="material-icons fa-pad" [icon]="code"></fa-icon>
+        <span>Technology</span>
+      </a>
+    </mz-navbar-item>
+    <mz-navbar-item [itemClass]="'hide-on-med-and-down'">
+      <a class="waves-effect" href="#brewing">
+        <fa-icon class="material-icons fa-pad" [icon]="beer"></fa-icon>
+        <span>Brewing</span>
+      </a>
+    </mz-navbar-item>
+    <mz-navbar-item [itemClass]="'hide-on-med-and-down'">
+      <a class="waves-effect" href="#hockey">
+        <fa-icon class="material-icons fa-pad" [icon]="hockey"></fa-icon>
+        <span>Hockey</span>
+      </a>
+    </mz-navbar-item>
+    <mz-navbar-item [itemClass]="'hide-on-med-and-down'">
+      <a class="waves-effect" href="#life">
+        <fa-icon class="material-icons fa-pad" [icon]="life"></fa-icon>
+        <span>Life</span>
+      </a>
+    </mz-navbar-item>
+  </mz-navbar-item-container>
+</mz-navbar>

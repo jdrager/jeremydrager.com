@@ -12,6 +12,12 @@ jobs:
       - image: circleci/node:9-browsers
     steps:
       - checkout
+      - run:
+          name: Update Node
+          command: |
+                  sudo npm cache clean -f
+                  sudo npm install -g n
+                  sudo n stable
       - restore_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:

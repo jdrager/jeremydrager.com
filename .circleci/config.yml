@@ -6,23 +6,6 @@ jobs:
       - image: circleci/node:9-browsers
     steps:
       - checkout
-  deploy_to_staging:
-    working_directory: ~/project
-    docker:
-      - image: circleci/node:9-browsers
-    steps:
-      - checkout
-      - run:
-          name: Install AWS cli
-          command: |
-                  sudo apt-get install python-dev python-pip
-                  sudo pip install awscli
-      - run:
-          name: Setting Signature Version 4 for S3 Request Authentication
-          command: aws configure set default.s3.signature_version s3v4
-      - run:
-          name: Deploy to S3
-          command: aws --region us-east-2 s3 sync ./ s3://dev.jeremydrager.com/ --delete
   deploy:
     working_directory: ~/project
     docker:
@@ -41,8 +24,11 @@ jobs:
           name: Add Cloudfront as Preview Service
           command: aws configure set preview.cloudfront true
       - run:
+          name: angular-build
+          command: yarn ng build --prod --aot --no-progress
+      - run:
           name: Deploy to S3
-          command: aws --region us-east-2 s3 sync ./ s3://jeremydrager.com/ --delete
+          command: aws --region us-east-2 s3 sync dist s3://jeremydrager.com/ --delete
       - run:
           name: Invalidate Cloudfront Cache
           command: aws cloudfront create-invalidation --distribution-id E27W7I7S0ZV2X7 --paths "/*"
@@ -51,14 +37,6 @@ workflows:
   build_and_deploy:
     jobs:
       - build
-      - deploy_to_staging:
-          context: AWS
-          requires:
-            - build
-          filters:
-            branches:
-              ignore:
-                - master
       - deploy:
           context: AWS
           requires:

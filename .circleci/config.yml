@@ -25,7 +25,7 @@ jobs:
           command: aws configure set preview.cloudfront true
       - run:
           name: angular-build
-          command: yarn ng build --prod --aot --no-progress
+          command: yarn ng build --prod --aot --progress=true
       - run:
           name: Deploy to S3
           command: aws --region us-east-2 s3 sync dist s3://jeremydrager.com/ --delete

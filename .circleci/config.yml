@@ -44,7 +44,7 @@ jobs:
           command: yarn ng build --prod --aot --progress=true
       - run:
           name: Deploy to S3
-          command: aws --region us-east-2 s3 sync dist s3://jeremydrager.com/ --delete
+          command: aws --region us-east-2 s3 sync dist/jeremydrager s3://jeremydrager.com/ --delete
       - run:
           name: Invalidate Cloudfront Cache
           command: aws cloudfront create-invalidation --distribution-id E27W7I7S0ZV2X7 --paths "/*"
